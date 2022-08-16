@@ -25,8 +25,6 @@ with left_column:
         'Gender:',
        ['Male','Female'])
 
-st.subheader()
-
 
 input_age= st.slider('Age', 0, 100, 1)
 input_height = st.text_input("""Height(e.g for 5'9" inches enter as 509)""",500)
