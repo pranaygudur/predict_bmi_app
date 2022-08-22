@@ -7,6 +7,7 @@ import pandas as pd
 st.header("BMI Quote Prediction App")
 st.text_input("Enter your Name(Optional): ", key="name")
 data = pd.read_csv('Dummy-Data.csv')
+data = data.drop('IssueDate',axis=1)
 #load label encoder
 #encoder = LabelEncoder()
 #encoder.classes_ = np.load('classes.npy',allow_pickle=True)
