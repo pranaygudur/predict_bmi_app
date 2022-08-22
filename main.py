@@ -4,9 +4,9 @@ import pandas as pd
 #from sklearn.preprocessing import  LabelEncoder
 #import xgboost as xgb
 #import numpy as np
-st.header("Prudential App")
+st.header("BMI Quote Prediction App")
 st.text_input("Enter your Name(Optional): ", key="name")
-#data = pd.read_csv("/Users/pranay/Desktop/Prudential/Dummy-Data.csv")
+data = pd.read_csv("/Users/pranay/Desktop/Prudential/Dummy-Data.csv")
 #load label encoder
 #encoder = LabelEncoder()
 #encoder.classes_ = np.load('classes.npy',allow_pickle=True)
@@ -15,8 +15,8 @@ st.text_input("Enter your Name(Optional): ", key="name")
 #best_xgboost_model = xgb.XGBRegressor()
 #best_xgboost_model.load_model("best_model.json")
 
-#if st.checkbox('Show Training Dataframe'):
- #   data
+if st.checkbox('Show Training Dataframe'):
+    data
 
 st.subheader("Please provide your inputs below to generate quote instantly")
 left_column, right_column = st.columns(2)
@@ -41,7 +41,7 @@ def category(age,wt,ht,gender):
             return 750
         elif (age>=40 and age<=59) and (bmi<18.49 or bmi>38.5):
             return 1000
-        elif (age>=60) and (bmi<18.49 or bmi>38.5):
+        elif (age>=60) and (bmi<18.49 or bmi>38.5): 
             return 2000
         else:
             return 500
