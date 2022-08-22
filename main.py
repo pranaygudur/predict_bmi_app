@@ -6,7 +6,7 @@ import pandas as pd
 #import numpy as np
 st.header("BMI Quote Prediction App")
 st.text_input("Enter your Name(Optional): ", key="name")
-data = pd.read_csv("/Users/pranay/Desktop/Prudential/Dummy-Data.csv")
+data = pd.read_csv("Dummy-Data.csv")
 #load label encoder
 #encoder = LabelEncoder()
 #encoder.classes_ = np.load('classes.npy',allow_pickle=True)
