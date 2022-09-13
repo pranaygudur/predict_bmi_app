@@ -5,6 +5,7 @@ from itertools import combinations
 import numpy as np
 from hyperopt import hp
 from hyperopt import fmin, tpe, STATUS_OK, STATUS_FAIL, Trials
+import pickle 
 
 from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import train_test_split
